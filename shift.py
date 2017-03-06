@@ -43,7 +43,7 @@ def shift(data, k):
     return np.fft.irfft(new_fft)
 
 def wav_split(raw, size=1024):
-	chunk_num = int(len(raw)/size)
+    chunk_num = int(len(raw)/size)
     new = [raw[size*seg : size*(seg+1)] for seg in range(chunk_num)]
     new.append(raw[size*chunk_num:])
     return new
